@@ -1,1 +1,1 @@
-https://github.com/rusgazi/ono-tebe-nado fd.git
+https://github.com/rusgazi/ono-tebe-nado-fd.git
