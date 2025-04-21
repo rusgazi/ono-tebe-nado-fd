@@ -14,17 +14,21 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  }
-
-  .header__links-list-item,
-  .header__links-list-item_no-bullit {
-  display: list-item;
   list-style-type: none;
   }
 
-  .header__link_active,
+  .header__links-list-item {
+  display: list-item;
+  }
+
+  .header__links-list-item_no-bullit {
+  list-style: none;
+  }
+
   .header__link {
-  text-decoration: none;
+  display: list-item;
+  list-style-type: circle;
+  border-bottom: 1px solid black;
   color: #000;
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -33,10 +37,8 @@
   line-height: normal;
   }
 
-  .header__link {
-  display: list-item;
-  list-style-type: circle;
-  border-bottom: 1px solid black;
+  .header__link_active {
+    text-decoration: none;
   }
   
   .header__logo {
@@ -79,13 +81,6 @@
     border-bottom: 0.5px solid black;
   }
   
-  .city-address-second,
-  .city-address-first {
-    display: flex;
-    align-self: flex-start;
-  }
-  
-  
   /* блок cover */
   .cover {
     background-image: url(../images/cover.jpg);
@@ -95,8 +90,8 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: space-between;
-    font-size: 1100px;
+    justify-content: space-between; 
+    font-size: 1100px;   
   }
   
   .overlay {
@@ -155,44 +150,40 @@
     letter-spacing: 0.3em;
   }
   
- 
-  
   .cover__description {
-    color: #FFF;
-    z-index: 1;
-    padding: 0 50px 50px;
     display: flex;
-    justify-content: flex-end;
-    text-align: center;
-    align-items: center;
-    gap: 78px;
+    z-index: 1;
+    color: #FFF;
   }
   
   .cover__description-text {
+    position: absolute;
+    inset: 667px 385px 62px 78px;
+    font-weight: 400;
     font-size: 22px;
-    font-style: normal;
-    line-height: 28px;
+    line-height: 127%;
     text-transform: uppercase;
-    word-spacing: 18px;
+    color: #FFF;
+    word-spacing: 18.3px;
   }
   
   .bet-button {
+    position: absolute;
+    inset: 655px 50px 51px 794px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    width: 256px;
+    height: 51px;
+    font-weight: 500;
     font-size: 22px;
-    font-style: normal;
-    line-height: 28px;
     text-transform: uppercase;
+    text-align: center;
     color: #FFF;
-    font-family: Raleway, sans-serif;
-    min-width: 257px;
-    min-height: 52px;
-    border: 2px solid #fff;
-    background-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
   }
   
   /* блок  lots*/
   .lots {
-    margin: 180px 50px;
+    padding: 180px 50px;
   }
   
   .lots__heading {
@@ -210,6 +201,7 @@
     justify-content: center;
     list-style: none;
     margin: 28px 0;
+    flex-wrap: nowrap;
   }
   
   .card-link {
@@ -220,9 +212,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 563px;
+    min-height: 596px;
     width: 334px;
-    padding: 50px 40px;
+    padding: 48px 40px;
     justify-content: space-between;
     background-size: cover;
     background-repeat: no-repeat;
@@ -312,7 +304,7 @@
   /* блок footer(подвал) */
   .footer {
     display: flex;
-    margin: 0 50px 90px;
+    padding: 1px 50px 82px 50px;
     justify-content: space-between;
   }
   
@@ -341,6 +333,6 @@
     list-style: none;
   }
   
-  .footer__social-list-item {
+  .footer__social-icon {
     width: 48px;
   }

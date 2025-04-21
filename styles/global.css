@@ -34,8 +34,7 @@ img {
     width: 100%;
 }
 
-a:hover,
-button:hover {
+.clicking:hover {
     opacity: 0.3;
     transition: opacity 1.3s ease;
-}
+  }
