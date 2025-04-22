@@ -19,14 +19,6 @@
 
   .header__links-list-item {
   display: list-item;
-  }
-
-  .header__links-list-item_no-bullit {
-  list-style: none;
-  }
-
-  .header__link {
-  display: list-item;
   list-style-type: circle;
   border-bottom: 1px solid black;
   color: #000;
@@ -37,8 +29,16 @@
   line-height: normal;
   }
 
+  .header__links-list-item_no-bullit {
+  list-style: none;
+  }
+
+  .header__link {
+  text-decoration: none;
+  }
+
   .header__link_active {
-    text-decoration: none;
+  border: none;
   }
   
   .header__logo {
@@ -73,8 +73,7 @@
     line-height: 23.6px;
   }
   
-  .mail-address,
-  .phone-address {
+  .address-item {
     text-decoration: none;
     display: flex;
     align-self: flex-start;
@@ -118,6 +117,7 @@
   }
   
   .aligned-text {
+    display: flex;
     font-weight: 700;
     font-size: 100px;
     line-height: 115px;
@@ -126,64 +126,56 @@
   }
 
   .aligned-text_left {
-    display: flex;
+    justify-content: flex-start;
   }
 
   .aligned-text_center {
     width: 100%;
-    font-weight: 700;
-    font-size: 100px;
-    line-height: 115px;
-    letter-spacing: 0.3em;
-    display: flex;
     justify-content: center;
     align-content: center;
   }
 
   .aligned-text_right {
     width: 100%;
-    display: flex;
     justify-content: flex-end;
-    font-weight: 700;
-    font-size: 100px;
-    line-height: 115px;
-    letter-spacing: 0.3em;
   }
   
   .cover__description {
-    display: flex;
     z-index: 1;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: end;
+    align-items: center;
+    max-width: 1440px;
+    padding: 118px 50px 50px 50px;
+}
+
+.cover__description-text {
     color: #FFF;
-  }
-  
-  .cover__description-text {
-    position: absolute;
-    inset: 667px 385px 62px 78px;
+    font-size: 22px;
+    font-style: normal;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 127%;
+    line-height: 30px;
+    word-spacing: 18px;
     text-transform: uppercase;
-    color: #FFF;
-    word-spacing: 18.3px;
-  }
-  
-  .bet-button {
-    position: absolute;
-    inset: 655px 50px 51px 794px;
-    background-color: transparent;
-    border: 1px solid #fff;
-    width: 256px;
-    height: 51px;
-    font-weight: 500;
+    padding-right: 78px;
+}
+
+.bet-button {
     font-size: 22px;
     text-transform: uppercase;
-    text-align: center;
     color: #FFF;
-  }
+    border: 1px solid #ffffff;
+    background: transparent;
+    z-index: 3;
+    padding: 12px 30px 12px 33px;
+}
   
   /* блок  lots*/
   .lots {
-    padding: 180px 50px;
+    padding: 180px 50px 90px 50px;
   }
   
   .lots__heading {
@@ -201,7 +193,7 @@
     justify-content: center;
     list-style: none;
     margin: 28px 0;
-    flex-wrap: nowrap;
+    min-width: 25px;
   }
   
   .card-link {
@@ -324,6 +316,7 @@
   }
   
   .footer__menu {
+    text-align: center;
     margin-left: 34px;
   }
   
